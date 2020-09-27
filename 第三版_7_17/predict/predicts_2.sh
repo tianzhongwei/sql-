@@ -1,0 +1,39 @@
+vehs=('CSA6454NDPHEV2' \
+'BMW6462AAHEV(BMWX1)' \
+'BJ7001BPH6-BEV' \
+'CSA6456BEV1' \
+'ZK6805BEVG12' \
+'ZK6105BEVG23' \
+'SQR5021XXYBEVK061' \
+'BMW7201CMHEV' \
+'SQR7000BEVJ72' \
+'BJ7000C5E2-BEV' \
+'BJ7001BPH1-BEV' \
+'MR7153PHEV01' \
+'BMW7201EMHEV' \
+'BYD6490STHEV1' \
+'HQ7002BEV15' \
+'ZK6805BEVG13' \
+'DFM7000G1F6BEV' \
+'SZS6460A05BEV' \
+'CC7001CE03BEV' \
+'BYD7152WTHEVB' \
+'CRC5030XXYB-LBEV' \
+'GZ6100LGEV5' \
+'DFL7000NAH1BEV' \
+'BYD6460STHEV10' \
+'HMA7003S13BEV' \
+'ZK6815BEVG1' \
+'GAM7000BEVA0C')
+
+
+download[doc://16047 predict.sh]
+
+seg=2
+for veh in ${vehs[*]};do
+    for i in {0..4}
+        do
+            sh predict.sh $veh ${i} ${seg}
+    done
+    echo ${veh} >> /home/tianzhongwei_x/predicts_2.log
+done
